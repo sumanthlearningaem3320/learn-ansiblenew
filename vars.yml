@@ -6,3 +6,14 @@
     - name: print Url variable
       ansible.builtin.debug:
         msg: "{{URL}}"
+
+- name: ececute shell command
+  hosts: localhost
+  tasks:
+    - name: printuptimeofserver
+      ansible.builtin.shell: uptime
+      register: subject
+    - name: printoutvar
+      ansible.builtin.debug:
+        msg: "{{subject}}"
+
