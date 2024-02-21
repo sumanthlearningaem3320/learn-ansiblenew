@@ -1,0 +1,4 @@
+- name: calling on roles
+  hosts: localhost
+  roles:
+    - demo
