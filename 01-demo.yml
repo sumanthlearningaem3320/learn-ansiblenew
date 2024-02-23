@@ -1,4 +1,5 @@
-- name: calling on roles
-  hosts: localhost
+- name: expense app
+  hosts: all
+  become: yes
   roles:
-    - demo
+    - "{{test_role}}"
