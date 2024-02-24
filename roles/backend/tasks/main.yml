@@ -35,7 +35,7 @@
     name: mysql
     state: present
 - name: install mysql schema
-  ansible.builtin.shell: mysql -h mysql-dev.sumanthguntur320.online -uroot -p{{MYSQL_ROOT_PASSWORD}} < /app/schema/backend.sql
+  ansible.builtin.shell: mysql -h mysql-dev.sumanthguntur320.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
 - name: restart
   ansible.builtin.systemd:
     name: backend
